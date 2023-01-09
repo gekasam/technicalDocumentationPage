@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <media charset="utf-8">
+    <media name="viewport" content="width=display-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> 
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Python Documentation</header>     
+      <a class="nav-link" href="#Introduction">Introduction</a>
+      <a class="nav-link" href="#What_you_should_already_know">What you should already know</a>
+      <a class="nav-link" href="#Using_the_Python_Interpreter">Using the Python Interpreter</a>
+      <a class="nav-link" href="#About_comments_in_Python">About comments in Python</a>
+      <a class="nav-link" href="#Summary_of_Python_3's_built-in_types">Summary of Python 3's built-in types</a>
+      <a class="nav-link" href="#Numbers">Numbers</a>
+      <a class="nav-link" href="#Strings">Strings</a>
+      <a class="nav-link" href="#Lists">Lists</a>
+      <a class="nav-link" href="#First_Steps_Towards_Programming">First Steps Towards Programming</a>
+      <a class="nav-link" href="#if_Statements">if Statements</a>
+      <a class="nav-link" href="#for_Statements">for Statements</a>
+      <a class="nav-link" href="#The_range()_Function">The range() Function</a>
+	    <a class="nav-link" href="#break_and_continue_Statements,_and_else_Clauses_on_Loops">break and continue Statements, and else Clauses on Loops</a>
+      <a class="nav-link" href="#pass_Statements">pass Statements</a>
+      <a class="nav-link" href="#Reference">Reference</a>
+    </nav>
+    <main id="main-doc">
+      <a href="#navbar" title="BackToTop" class="topbutton">Up</a>
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+          <p>
+            Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.
+          </p>
+          <p>
+            Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms, including structured (particularly procedural), object-oriented and functional programming. It is often described as a "batteries included" language due to its comprehensive standard library.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="What_you_should_already_know">
+        <header>What you should already know</header>
+        <article>
+          <p>
+            This guide assumes you have the following basic background:
+          </p>
+            <ul> 
+            <li>A basic knowledge of English.</li>
+            <li>General PC skills</li>
+            </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Using_the_Python_Interpreter">
+        <header>Using the Python Interpreter</header>
+        <article>
+          <p>
+            The Python interpreter is usually installed as /usr/local/bin/python3.10 on those machines where it is available; putting /usr/local/bin in your Unix shell’s search path makes it possible to start it by typing the command:
+          <code>
+            python3.10
+          </code>
+          to the shell. Since the choice of the directory where the interpreter lives is an installation option, other places are possible; check with your local Python guru or system administrator. (E.g., /usr/local/python is a popular alternative location.)
+          </p>
+          <p>
+            On Windows machines where you have installed Python from the Microsoft Store, the <code class="inline-code">python3.10</code> command will be available. If you have the py.exe launcher installed, you can use the <code class="inline-code">py</code> command. See Excursus: Setting environment variables for other ways to launch Python.
+          </p> 
+        </article>       
+      </section>
+      <section class="main-section" id="About_comments_in_Python">
+        <header>About comments in Python</header>
+        <article>
+          <p>
+            Many of the examples in this manual, even those entered at the interactive prompt, include comments. Comments in Python start with the hash character,  <code class="inline-code">#</code>, and extend to the end of the physical line. A comment may appear at the start of a line or following whitespace or code, but not within a string literal. A hash character within a string literal is just a hash character. Since comments are to clarify code and are not interpreted by Python, they may be omitted when typing in examples.
+          </p>
+          <p>
+            Some examples:
+          </p>
+          <code>
+            # this is the first comment<br>
+            spam = 1  # and this is the second comment<br>
+            # ... and now a third!<br>
+            text = "# This is not a comment because it's inside quotes."
+          </code>          
+        </article>
+      </section>
+      <section class="main-section" id="Summary_of_Python_3's_built-in_types">
+        <header>Summary of Python 3's built-in types</header>
+        <article>
+          <ul>
+            <li>Integers</li>
+            <li>Floating-Point Numbers</li>
+            <li>Complex Numbers</li>
+            <li>Strings
+              <ul>
+                <li>Escape Sequences in Strings</li>
+                <li>Raw Strings</li>
+                <li>Triple-Quoted Strings</li>
+              </ul>
+            </li>
+            <li>Boolean Type, Boolean Context, and “Truthiness”</li>
+            <li>Built-In Functions
+              <ul>
+                <li>Math</li>
+                <li>Type Conversion</li>
+                <li>Iterables and Iterators</li>
+                <li>Composite Data Type</li>
+                <li>Classes, Attributes, and Inheritance</li>
+                <li>Input/Output</li>
+                <li>Variables, References, and Scope</li>
+                <li>Miscellaneous</li>
+              </ul>
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Numbers">
+        <header>Numbers</header>
+        <article>
+          <p>
+            The interpreter acts as a simple calculator: you can type an expression at it and it will write the value. Expression syntax is straightforward: the operators <code class="inline-code">+</code>, <code class="inline-code">-</code>, <code class="inline-code">*</code> and <code class="inline-code">/</code> work just like in most other languages (for example, Pascal or C); parentheses <code class="inline-code">(())</code> can be used for grouping. For example:
+          </p>
+          <code>
+            2 + 2<br>
+            50 - 5*6<br>
+            (50 - 5*6) / 4<br>
+            8 / 5  # division always returns a floating point number
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="Strings">
+        <header>Strings</header>
+        <article>
+          <p>Besides numbers, Python can also manipulate strings, which can be expressed in several ways. They can be enclosed in single quotes (<code class="inline-code">'...'</code>) or double quotes (<code class="inline-code">"..."</code>) with the same result 2. <code class="inline-code">\</code> can be used to escape quotes:
+          </p>
+          <code>
+            'spam eggs'  # single quotes<br>
+            'doesn\'t'  # use \' to escape the single quote...<br>
+            "doesn't"  # ...or use double quotes instead<br>
+            '"Yes," they said.'<br>
+            "\"Yes,\" they said."<br>
+            '"Isn\'t," they said.'
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="Lists">
+        <header>Lists</header>
+        <article>
+          <p>
+            Python knows a number of compound data types, used to group together other values. The most versatile is the list, which can be written as a list of comma-separated values (items) between square brackets. Lists might contain items of different types, but usually the items all have the same type.
+          </p>
+          <code>
+            squares = [1, 4, 9, 16, 25]<br>
+            squares
+          </code>
+          <p>
+            Like strings (and all other built-in sequence types), lists can be indexed and sliced:
+          </p>
+          <code>
+            squares[0]  # indexing returns the item<br>
+            squares[-1]<br>
+            squares[-3:]  # slicing returns a new list
+          </code>
+          <p>
+            All slice operations return a new list containing the requested elements. This means that the following slice returns a shallow copy of the list:
+          </p>
+          <code>
+            squares[:]
+          </code>
+          <p>
+            Lists also support operations like concatenation:
+          </p>
+          <code>
+            squares + [36, 49, 64, 81, 100]
+          </code>
+          <p>
+            Unlike strings, which are immutable, lists are a mutable type, i.e. it is possible to change their content:
+          </p>
+          <code>
+            cubes = [1, 8, 27, 65, 125]  # something's wrong here<br>
+            4 ** 3  # the cube of 4 is 64, not 65!<br>
+            cubes[3] = 64  # replace the wrong value<br>
+            cubes
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="First_Steps_Towards_Programming">
+        <header>First Steps Towards Programming</header>
+        <article>
+          <p>
+            Of course, we can use Python for more complicated tasks than adding two and two together. For instance, we can write an initial sub-sequence of the Fibonacci series as follows:
+          </p>
+          <code>
+          <pre>
+# Fibonacci series:
+# the sum of two elements defines the next
+a, b = 0, 1
+while a < 10:
+    print(a)
+    a, b = b, a+b
+          </pre>
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="if_Statements">
+        <header><code class="inline-code">if</code> Statements</header>
+        <article>
+          <p>
+            Perhaps the most well-known statement type is the if statement. For example:
+          </p>
+          <code>
+          <pre>
+x = int(input("Please enter an integer: "))
+
+if x < 0:
+    x = 0
+    print('Negative changed to zero')
+elif x == 0:
+    print('Zero')
+elif x == 1:
+    print('Single')
+else:
+    print('More')
+          </pre>
+          </code>
+          <p>There can be zero or more <code class="inline-code">elif</code> parts, and the <code class="inline-code">else</code> part is optional. The keyword ‘<code class="inline-code">elif</code>’ is short for ‘else if’, and is useful to avoid excessive indentation. An <code class="inline-code">if</code> … <code class="inline-code">elif</code> … <code class="inline-code">elif</code> … sequence is a substitute for the <code class="inline-code">switch</code> or <code class="inline-code">case</code> statements found in other languages.
+          </p>
+          <p>If you’re comparing the same value to several constants, or checking for specific types or attributes, you may also find the <code class="inline-code">match</code> statement useful. For more details see match Statements.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="for_Statements">
+        <header><code class="inline-code">for</code> Statements</header>
+        <article>
+          <p>
+            The <code class="inline-code">for</code> statement in Python differs a bit from what you may be used to in C or Pascal. Rather than always iterating over an arithmetic progression of numbers (like in Pascal), or giving the user the ability to define both the iteration step and halting condition (as C), Python’s for statement iterates over the items of any sequence (a list or a string), in the order that they appear in the sequence. For example (no pun intended):
+          </p>
+          <code>
+          <pre>
+# Measure some strings:
+words = ['cat', 'window', 'defenestrate']
+for w in words:
+    print(w, len(w))
+          </pre>
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="The_range()_Function">
+        <header>The <code class="inline-code">range()</code> Function</header>
+        <article>
+          <p>
+            If you do need to iterate over a sequence of numbers, the built-in function <code class="inline-code">range()</code> comes in handy. It generates arithmetic progressions:
+          </p>
+          <code>
+          <pre>
+for i in range(5):
+    print(i)
+          </pre>
+          </code>
+          <p>
+            The given end point is never part of the generated sequence; <code class="inline-code">range(10)</code> generates 10 values, the legal indices for items of a sequence of length 10. It is possible to let the range start at another number, or to specify a different increment (even negative; sometimes this is called the ‘step’):
+          </p>
+          <code>
+          <pre>
+list(range(5, 10))
+
+list(range(0, 10, 3))
+
+list(range(-10, -100, -30))
+          </pre>
+          </code>      
+        </article>
+      </section>
+      <section class="main-section" id="break_and_continue_Statements,_and_else_Clauses_on_Loops">
+        <header><code class="inline-code">break</code> and <code class="inline-code">continue</code> Statements, and <code class="inline-code">else</code> Clauses on Loops</header>
+        <article>
+          <p>
+            The <code class="inline-code">break</code> statement, like in C, breaks out of the innermost enclosing <code class="inline-code">for</code> or <code class="inline-code">while</code> loop.<br><br>
+  Loop statements may have an <code class="inline-code">else</code> clause; it is executed when the loop terminates through exhaustion of the iterable (with <code class="inline-code">for</code>) or when the condition becomes false (with <code class="inline-code">while</code>), but not when the loop is terminated by a <code class="inline-code">break</code> statement. This is exemplified by the following loop, which searches for prime numbers:
+          </p>
+          <code>
+          <pre>
+for n in range(2, 10):
+    for x in range(2, n):
+        if n % x == 0:
+            print(n, 'equals', x, '*', n//x)
+            break
+    else:
+        # loop fell through without finding a factor
+        print(n, 'is a prime number')
+          </pre>
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="pass_Statements">
+        <header><code class="inline-code">pass</code> Statements</header>
+        <article>
+          <p>
+            The <code class="inline-code">pass</code> statement does nothing. It can be used when a statement is required syntactically but the program requires no action. For example:
+          </p>
+          <code>
+          <pre>
+while True:
+    pass  # Busy-wait for keyboard interrupt (Ctrl+C)
+          </pre>
+          </code>
+        </article>
+      </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article>
+          <ul>
+            <li>All the documentation in this page is taken from 
+              <ul>
+                <li><a href="https://docs.python.org/3/">Python 3.10.8 documentation</a></li> 
+                <li><a href="https://en.wikipedia.org/wiki/Python_(programming_language)#Syntax_and_semantics">Wikipedia</a></li> 
+                <li><a href="https://realpython.com/python-data-types/">Real Python</a></li></ul>
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
