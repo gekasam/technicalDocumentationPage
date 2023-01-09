@@ -6,6 +6,7 @@ html {
   line-height: 1.5;
   scroll-behavior: smooth;
 }
+
 header {
   color: black;
   margin: 10px;
@@ -13,10 +14,12 @@ header {
   font-size: 1.8em;
   font-weight: lighter;
 }
+
 #main-doc header {
   text-align: left;
   margin: 0px;
 }
+
 #navbar {
   position: fixed;
   overflow: auto;
@@ -26,6 +29,7 @@ header {
   top: 0;
   left: 0;
 }
+
 #navbar a {
   display: block;
   padding: 10px 30px;
@@ -34,20 +38,24 @@ header {
   cursor: pointer;
   border-top: 1px solid; 
 }
+
 #main-doc {
   position: absolute;
   margin-left: 310px;
   padding: 20px;
   margin-bottom: 100px;
 }
+
 section article {
   color: #4d4e53;
   margin: 15px;
   font-size: 0.96em;
 }
+
 section li {
   margin: 15px 0px 0px 20px;
 }
+
 code {
   display: block;
   text-align: left;
@@ -58,6 +66,7 @@ code {
   border-radius: 5px;
   font-size: 1.1em;
 }
+
 .inline-code {
   display: inline;
   padding: 0;
@@ -66,6 +75,7 @@ code {
   background-color: #f2f2f2;
   color: #4a4a4f;
 }
+
 .topbutton {
 width: 40px;
 border: 2px solid #ccc;
@@ -85,12 +95,14 @@ border-radius: 5px;
 -khtml-border-radius: 5px;
 z-index: 2;
 }
+
 @media only screen and (min-width: 815px) {
   .topbutton {
     animation: 0.5s fadeOut;
     animation-fill-mode: forwards;
   }
 }
+
 @media only screen and (max-width: 815px) {
   #navbar {
     position: absolute;
@@ -113,6 +125,7 @@ z-index: 2;
     animation-fill-mode: forwards;
   }
 }
+
 @media only screen and (max-width: 400px) {
   #main-doc {
     margin-left: -10px;
@@ -145,6 +158,7 @@ z-index: 2;
     }
 
 }
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -154,6 +168,7 @@ z-index: 2;
     opacity: 1;
   }
 }
+
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -163,4 +178,3 @@ z-index: 2;
     opacity: 0;
   }
 }
-
