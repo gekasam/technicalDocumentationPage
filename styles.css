@@ -72,6 +72,9 @@ code {
   margin: 10px;
   border-radius: 5px;
   font-size: 1.1em;
+}
+
+pre {
   overflow: scroll;
 }
 
