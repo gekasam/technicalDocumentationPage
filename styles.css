@@ -75,10 +75,6 @@ code {
   overflow: scroll;
 }
 
-pre {
-  padding-right: 6px;
-}
-
 .inline-code {
   display: inline;
   padding: 0;
@@ -144,6 +140,7 @@ z-index: 2;
 
   code {
     margin-left: -20px;
+    margin-right: 5px;
     width: 100%;
     padding: 15px;
     padding-left: 10px;
