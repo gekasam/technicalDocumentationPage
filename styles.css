@@ -1,4 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html {
+  box-sizing: border-box;
   min-width: 290px;
   color: #4d4e53;
   background-color: #ffffff;
