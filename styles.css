@@ -75,6 +75,10 @@ code {
   overflow: scroll;
 }
 
+pre {
+  padding-right: 6px;
+}
+
 .inline-code {
   display: inline;
   padding: 0;
